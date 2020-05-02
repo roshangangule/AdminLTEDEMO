@@ -110,7 +110,7 @@ public class MyHibernateConfig {
         properties.put(PROPERTY_NAME_HIBERNATE_SHOW_SQL, env.getRequiredProperty(PROPERTY_NAME_HIBERNATE_SHOW_SQL));
         properties.put("hibernate.format_sql", env.getRequiredProperty("hibernate.format_sql"));
         properties.put("hibernate.hbm2ddl.auto", env.getRequiredProperty("hibernate.hbm2ddl.auto"));
-        properties.put("hibernate.hbm2ddl.import_files", "import_initial_data.sql");
+        properties.put("hibernate.hbm2ddl.import_files", "initial.sql");
 
         return properties;
     }
