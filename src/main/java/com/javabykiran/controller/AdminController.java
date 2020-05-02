@@ -3,6 +3,7 @@ package com.javabykiran.controller;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.swing.text.StyledEditorKit.BoldAction;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +41,7 @@ public class AdminController {
 
 	@PostMapping("/dashboard")
 	public String showDashboard(@RequestParam("email") String email, @RequestParam("password") String pass,
-			Model theModel, HttpServletRequest request) {
+			Model theModel, HttpSession session) {
 
 		System.out.println("email:" + email + " Password" + pass);
 
@@ -59,7 +60,7 @@ public class AdminController {
 			return "redirect:login";
 		} else {
 			theModel.addAttribute("username", userName);
-			request.setAttribute("username", userName);
+			session.setAttribute("username", userName);
 			return "dashboard";
 		}
 

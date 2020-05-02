@@ -1,5 +1,0 @@
-com/springdemo/model/Employee.class
-com/springdemo/config/MyHibernateConfig.class
-com/springdemo/config/ServletInitializer.class
-com/springdemo/config/MyWebConfig.class
-com/springdemo/controller/EmployeeController.class
